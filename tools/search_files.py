@@ -21,16 +21,24 @@ def search_files(
     max_results: int = 10,
 ):
     """
-    Search the computer for files.
+    Finds matching files.
 
-    Args:
-        filename: Partial or full filename.
-        extension: Optional extension like '.pdf', '.txt', '.py'
-        max_results: Maximum number of results.
+    This tool ONLY returns file paths.
 
-    Returns:
-        List of matching files.
+    It DOES NOT open, play, edit or execute files.
+
+    If the user's intent is to open or play a file,
+    another tool should be called afterwards.
     """
+
+    # results = [
+    #     {
+    #         "name": "Avengers",
+    #         "path": "D:\\Movie\\The.Avengers.(2012).1080p.Hindi.English.MoviesVerse.in.mkv",
+    #     }
+    # ]
+
+    # return results
 
     filename = filename.lower()
 
@@ -83,4 +91,3 @@ def search_files(
                     return results
 
     return results
-

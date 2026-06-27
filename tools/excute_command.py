@@ -15,22 +15,25 @@ def is_safe(command: str):
 @tool
 def execute_cmd(command: str) -> str:
     """
-    Execute safe Windows CMD commands.
-
-    Use for:
-    - opening applications
-    - opening folders
-    - creating folders
-    - launching programs
+    Execute Windows CMD or PowerShell commands.
 
     Examples:
-    - start notepad
-    - start chrome
-    - mkdir Test
-    - explorer D:\\
+    - Open a file:
+        start "" "C:\\Movies\\movie.mkv"
 
-    Do not use for keyboard shortcuts.
-    Do not invent file paths.
+    - Open a folder:
+        explorer "C:\\Users\\Urooj\\Downloads"
+
+    - Open Chrome:
+        start chrome
+
+    - Launch Notepad:
+        start notepad
+
+    - Open a URL:
+        start https://youtube.com
+
+    Use this tool whenever the user's goal is to launch, open, play, or execute something.
     """
 
     try:
